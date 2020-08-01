@@ -9,32 +9,23 @@
 		<p>En la tierra pesas distinto que en Marte.</p>
 		<script type="text/javascript">
 			
+			/* We request the data from user and transform
+			to int */
 			var usuario = prompt("¿Cual es tu peso?");
 			var peso = parseInt(usuario);
+
+			// gravity data
 			var g_tierra = 9.8;
 			var g_marte = 3.7;
 			var g_jupiter = 24.8;
-			
 
+			/*  Ecuation to get the weight  */
 			var peso_final;
-			
-			/*primero se ejecuta lo de la derecha a izquierda */
-			
 			peso_final = (peso * g_marte) / g_tierra;
-			
-			/*
-			-> declarar el parseInt de esta manera:
 
-			peso_final = parseInt(peso_final);
-
-			-> tambien seria correcto ya que primero realiza la operacion y luego transforma el resultado a entero y luego le asigna a peso_final el nuevo valor
-			*/
-
-			/*primero se ejecuta lo de la derecha a izquierda, asi tomamos el resultado, lo convertimos a entero y luego imprimimos*/
+			/* Then just transform again to int and print the result */
 			document.write("Tu peso en Marte es: <strong>"+parseInt(peso_final) + " Kilos</strong>");
-			/*en javascript para poder hacer uso de etiquetas, debemos meterlas en texto libre o string. con las "" y entre los caracteres que queremos aplicarles la etiqueta...*/
 
-			
 		</script>
 	</body>
 </html>
